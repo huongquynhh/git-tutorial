@@ -4,39 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Phân_số
+namespace Không_gian_2_chiều
 {
     internal class Program
     {
         static void Main(string[] args)
-        {
-            Console.OutputEncoding=Encoding.UTF8;
-            PhanSo a =new PhanSo();
-            PhanSo b =new PhanSo(); 
-            PhanSo kq=new PhanSo();            
-            Console.WriteLine("Nhập phân số thứ nhất");
-            a.nhap();
-            a.xuat(a.Tuso, a.Mauso);
-            Console.WriteLine("Nhập phân số thứ hai");
-            b.nhap();
-            b.xuat(b.Tuso,b.Mauso);
-            Console.WriteLine("Phân số sau khi được rút gọn là");
-            a.rutgon();
-            a.xuat(a.Tuso, a.Mauso);
-            b.rutgon();
-            b.xuat(b.Tuso, b.Mauso);    
-            Console.WriteLine("Tổng hai phân số là");
-            kq = kq.congphanso(a, b);
-            kq.xuat(kq.Tuso, kq.Mauso);
-            Console.WriteLine("Hiệu hai phân số là");
-            kq = kq.truphanso(a, b);
-            kq.xuat(kq.Tuso, kq.Mauso);
-            Console.WriteLine("Tích hai phân số là");
-            kq = kq.nhanphanso(a, b);
-            kq.xuat(kq.Tuso, kq.Mauso);
-            Console.WriteLine("Thương hai phân số là");
-            kq = kq.chiaphanso(a, b);
-            kq.xuat(kq.Tuso, kq.Mauso);
+        {   Console.OutputEncoding = Encoding.UTF8;
+
+            Diem A = new Diem();
+            Diem B = new Diem();
+            Diem C=new Diem();
+            Console.WriteLine("Nhập tọa độ điểm A:");
+            A.nhap();
+            A.xuat();
+            Console.WriteLine("Nhập tọa độ điểm B");
+            B.nhap();
+            B.xuat();
+            C.kc(A,B);
+            C.xuatkc();
             Console.ReadLine();
         }
     }

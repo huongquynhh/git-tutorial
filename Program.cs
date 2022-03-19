@@ -4,25 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Không_gian_2_chiều
+namespace Sinh_Vien
 {
     internal class Program
     {
         static void Main(string[] args)
-        {   Console.OutputEncoding = Encoding.UTF8;
+        {    Console.OutputEncoding = Encoding.UTF8; 
+            sinhvien sv1=new sinhvien();
+            sinhvien sv2=new sinhvien();
+            Console.WriteLine("Thông tin sinh viên thứ nhất là:");
+            sv1.nhap();
+            sv1.xuat();
+            Console.WriteLine("Thông tin sinh viên thứ hai là:");
+            sv2.nhap();
+            sv2.xuat();
 
-            Diem A = new Diem();
-            Diem B = new Diem();
-            Diem C=new Diem();
-            Console.WriteLine("Nhập tọa độ điểm A:");
-            A.nhap();
-            A.xuat();
-            Console.WriteLine("Nhập tọa độ điểm B");
-            B.nhap();
-            B.xuat();
-            C.kc(A,B);
-            C.xuatkc();
-            Console.ReadLine();
+
         }
     }
 }
